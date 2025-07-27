@@ -1,0 +1,1 @@
+pyinstaller --onefile --windowed --hidden-import=torch --hidden-import=easyocr --hidden-import=cv2 src/coc/main.py
