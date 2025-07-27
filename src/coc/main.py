@@ -1,11 +1,11 @@
 from PyQt6.QtWidgets import QApplication
 import sys
-from coc import Control_pannel 
+from coc import ControlPanel
 
 def main():
-    print("hello world")
+    print("Running...")
     app = QApplication(sys.argv)
-    panel = Control_pannel.ControlPanel()
+    panel = ControlPanel.ControlPanel()
     panel.show()
     sys.exit(app.exec())
     

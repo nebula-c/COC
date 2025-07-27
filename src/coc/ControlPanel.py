@@ -1,4 +1,5 @@
 from PyQt6.QtWidgets import QWidget, QTextEdit, QPushButton, QVBoxLayout, QLabel
+from coc import SnippingWidget
 
 class ControlPanel(QWidget):
     def __init__(self):
@@ -22,10 +23,10 @@ class ControlPanel(QWidget):
         self.snip_window = None
 
     def start_capture(self):
-        self.hide()
+        # self.hide()
         self.status_label.setText("")
         self.result_text.clear()
-        self.snip_window = SnippingWidget(on_close_callback=self.on_snip_closed)
+        self.snip_window = SnippingWidget.SnippingWidget(on_close_callback=self.on_snip_closed)
         self.snip_window.ocr_done.connect(self.on_ocr_done)
         self.snip_window.show()
 
